@@ -1,0 +1,6 @@
+data,historico,valor,id_conta_debito,id_conta_credito
+2025-10-01,Venda de serviço A, 5000.00,1,5
+2025-10-05,Pagamento Aluguel,1200.00,7,1
+2025-10-10,Venda de Produto B,8000.00,1,5
+2025-10-15,Custo da mercadoria vendida do produto B,4500.00,6,1
+2025-10-20,Salário e Encargos,3500.00,7,1

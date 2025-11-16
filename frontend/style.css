@@ -1,0 +1,176 @@
+/* ================================
+   Variáveis globais
+================================ */
+:root {
+  --font-base: 'Arial', sans-serif;
+
+  /* Paleta de cores */
+  --color-primary: #4f46e5;
+  --color-secondary: #6366f1;
+  --color-accent: #16e28d;
+  --color-dark: #1f2937;
+  --color-light: #f9fafb;
+  --color-card-bg: #ecf5f1;
+  --color-text-dark: #3a3e44;
+  --color-text-accent: #30436b;
+
+  /* Overlays */
+  --overlay-dark: rgba(0, 0, 0, 0.432);
+}
+
+/* ================================
+   Reset básico
+================================ */
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  background: linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+              url("/frontend/assets/images/background-dre.jpg") no-repeat center center;
+  background-size: cover;
+  color: var(--color-light);
+}
+
+/* ================================
+   Header
+================================ */
+header {
+  background-color: rgba(154, 153, 165, 0.219); /* semi-transparente */
+  color: var(--color-light);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+header .subtitle {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+header .description {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ================================
+   Dashboard
+================================ */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.card-receita,
+.card-despesa,
+.card-lucro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-card-bg);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 450px;
+  min-height: 80px;
+}
+
+.metrica-titulo {
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  margin-left: 20px;
+}
+
+.metrica-valor {
+  font-size: 1.2rem;
+  color: var(--color-text-accent);
+  text-align: right;
+  margin-right: 20px;
+}
+
+/* ================================
+   Footer
+================================ */
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   Responsividade
+================================ */
+
+/* Mobile */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header .subtitle {
+    font-size: 1rem;
+  }
+
+  header .description {
+    font-size: 0.9rem;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .card-receita,
+  .card-despesa,
+  .card-lucro {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .metrica-valor {
+    margin-top: 10px;
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header .subtitle {
+    font-size: 1.1rem;
+  }
+
+  header .description {
+    font-size: 1rem;
+  }
+
+  .dashboard-container {
+    gap: 15px;
+    padding: 30px 10px;
+  }
+
+  .card-receita,
+  .card-despesa,
+  .card-lucro {
+    width: 95%;
+    max-width: 600px;
+  }
+}

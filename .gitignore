@@ -1,0 +1,12 @@
+# Arquivos Sensíveis
+.env
+
+# Ambientes Virtuais
+.venv/
+
+# Arquivos Gerados/Cache
+__pycache__/
+*.pyc
+dre_resultado.json
+tempCodeRunnerFile.py
+.dist/
